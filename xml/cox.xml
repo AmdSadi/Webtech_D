@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hotelList>
+
+  <hotel>
+    <id>01</id>
+    <name>Ocean Paradise</name>
+    <Stars>5 Star Hotel  </Stars>
+    <Facilities>
+		<facility Number='1'>
+				<fName>Internet</fName>
+			</facility>
+			<facility Number='2'>
+				<fName>Gym</fName>
+			</facility>
+			<facility Number='3'>
+				<fName>Parking </fName>
+			</facility>
+			<facility Number='4'>
+				<fName>Restaurant </fName>
+			</facility>
+			<facility Number='5'>
+				<fName>Pickup-Drop </fName>
+			</facility>
+	</Facilities>
+		
+		<address>
+			74 Kolatoli, beach road 
+		</address>
+		
+		<Distance> 1 KM from center</Distance>
+		<Available>True</Available>
+  </hotel>
+
+ <hotel>
+    <id>02</id>
+    <name>Hotel Long beach</name>
+    <Stars>4 Star Hotel </Stars>
+    <Facilities>
+		<facility Number='1'>
+				<fName>Internet</fName>
+			</facility>
+			<facility Number='2'>
+				<fName>Gym</fName>
+			</facility>
+			<facility Number='3'>
+				<fName>Parking </fName>
+			</facility>
+			<facility Number='4'>
+				<fName>Restaurant </fName>
+			</facility>
+			
+	</Facilities>
+	
+	<address>
+			4 Sugondha beach road
+		</address>
+		
+		<Distance> 2 KM from center</Distance>
+		<Available>False</Available>
+  </hotel>
+  
+  <hotel>
+  <id>03</id>
+    <name>Hotel Sayamen </name>
+    <Stars>2 Star Hotel </Stars>
+    <Facilities>
+			<facility Number='1'>
+				<fName>Restaurant </fName>
+			</facility>
+			
+	</Facilities>
+	
+	<address>
+			23 Laboni beach road 
+		</address>
+		
+		<Distance> 3 KM from center</Distance>
+		<Available>False</Available>
+  </hotel>
+  
+   <hotel>
+    <id>04</id>
+    <name>Hotel Shoibal</name>
+    <Stars>3 Star Hotel </Stars>
+    <Facilities>
+		
+			<facility Number='1'>
+				<fName>Parking </fName>
+			</facility>
+			
+			
+	</Facilities>
+	
+	<address>
+			6 cox’s bazar road 
+		</address>
+		
+		<Distance> 1 KM from center</Distance>
+		<Available>True</Available>
+  </hotel>
+  
+
+    
+</hotelList>

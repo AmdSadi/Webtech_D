@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hotellist [
+   <!ELEMENT hotellist (hotel*)>
+   <!ELEMENT hotel(id,name,Stars,Facilities*,address,Distance,Available)>
+   <!ELEMENT Facilities(facility*)>
+   <!ELEMENT facility(fname)>
+   <!ATTLIST facility Number CDATA#Required>
+   <!ELEMENT id	(#PCDATA)>
+   <!ELEMENT name	(#PCDATA)>
+   <!ELEMENT Stars	(#PCDATA)>
+   <!ELEMENT address	(#PCDATA)>
+   <!ELEMENT Distance	(#PCDATA)>
+   <!ELEMENT Available	(#PCDATA)>
+   <!ELEMENT fname	(#PCDATA)>
+   ]>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Studentlist [
+   <!ELEMENT Studentlist (Student*)>
+   <!ELEMENT Student(name,id,cgpa,CourseList*)>
+   <!ELEMENT CourseList(Course*)>
+   <!ELEMENT Course(CName,Section,Grade)>
+  
+   <!ELEMENT name	(#PCDATA)>
+    <!ELEMENT id	(#PCDATA)>
+   <!ELEMENT cgpa	(#PCDATA)>
+   <!ELEMENT CName	(#PCDATA)>
+   <!ELEMENT Section	(#PCDATA)>
+   <!ELEMENT Grade (#PCDATA)>
+   ]>

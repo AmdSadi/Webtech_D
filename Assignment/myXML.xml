@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StudentList>
+
+  <Student>
+  <name>Sample student 1</name>
+    <id>12-21211-2</id>
+    <cgpa>3.86</cgpa>
+    <CourseList>
+		<Course>
+				<CName>Web Tech</CName>
+				<Section>B</Section>
+				<Grade>A+</Grade>
+		</Course>
+		<Course>
+				<CName>Computer Graphics</CName>
+				<Section>B</Section>
+				<Grade>A</Grade>
+		</Course>
+			
+	</CourseList>
+		
+  </Student>
+  <Student>
+  <name>Sample student 2</name>
+    <id>12-21221-2</id>
+    
+    <cgpa>3.80</cgpa>
+    <CourseList>
+		<Course>
+				<CName>Web Tech</CName>
+				<Section>B</Section>
+				<Grade>A+</Grade>
+		</Course>
+		<Course>
+				<CName>Computer Graphics</CName>
+				<Section>B</Section>
+				<Grade>A</Grade>
+		</Course>
+			
+	</CourseList>
+		
+  </Student>
+
+
+    
+</StudentList>
