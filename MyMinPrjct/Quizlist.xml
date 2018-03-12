@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<QuizList>
+	<Quiz>
+		<Subject>Algorithm</Subject>
+		
+			<ques>
+			 <name>what algorithm use for determining shortest path?</name>
+			 <option1>BFS</option1>
+			 <option2>DFS</option2>
+			 <option3>Dijkstra</option3>
+			 <ans>Dijkstra</ans>
+			</ques>
+			<ques>
+			<name>what is the complexity for building Segment tree </name>
+			<option1>O(n^2)</option1>
+			<option2>O(nlogn)</option2>
+			<option3>O(4*nlogn)</option3>
+			<ans>O(4*nlogn)</ans>
+			</ques>
+	</Quiz>
+	<Quiz>
+		<Subject>Math</Subject>
+		
+			<ques>
+			 <name>what is the differentitation of x?</name>
+			 <option1>1</option1>
+			 <option2>x^2</option2>
+			 <option3>1/x</option3>
+			 <ans>1</ans>
+			</ques>
+			<ques>
+			 <name>what is the Intregation of x?</name>
+			 <option1>1</option1>
+			 <option2>(x^2)/2</option2>
+			 <option3>1/x</option3>
+			 <ans>(x^2)/2</ans>
+			</ques>
+	</Quiz>
+</QuizList>
