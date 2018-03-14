@@ -3,26 +3,24 @@ session_start()?>
 <!doctype html>
 <html>
 	<head><title>Upload Ques</title>
+		<input type=button onClick="location.href='Student.php'" value='Home' >
+		 &nbsp &nbsp
 		<e1>Upload Question</e1>
+
+
 	</head>
 	<body>
+		   &nbsp &nbsp <input type=button onClick="location.href='logout.php'" value='logout' ><br/>
+
 		<?php if($_SESSION["type"]!="teacher")header('Location:Index.php'); ?>
-		<form name="upload" method="post" action="">
-
-                <table border="0" cellpadding="5" >
-                   <tr>
-                     <td>Subject:</td>
-                     <td><input type="text" name="Sub" required/></td>
-                   </tr>
-                   <tr>
-                   	<td colspan="2" align="right"><input type="submit" value="Submit"/></td>
-                   </tr>
-                </table>
-
-          </form>
+		
           <form name="uploadq" method="post" action="">
 
                 <table border="0" cellpadding="5" >
+                	<tr>
+                     <td>Subject:</td>
+                     <td><input type="text" name="Sub" required/></td>
+                   </tr>
                    <tr>
                      <td>Ques:</td>
                      <td><input type="text" name="ques" required/></td>
@@ -44,6 +42,7 @@ session_start()?>
                      <td><input type="text" name="ans" required/></td>
                    </tr>
                    <tr>
+
                    	<td colspan="2" align="right"><input type="submit" value="Submit"/></td>
                    </tr>
                 </table>
@@ -68,13 +67,15 @@ session_start()?>
 				$xml->load('Quizlist.xml');
 				$rootTag=$xml->getElementsByTagName("QuizList")->item(0);
 				$QuizTag=$xml->createElement("Quiz");
-				if(!isset($_COOKIE["flag"])){
 				
 				
 				$subjectTag=$xml->createElement("Subject",$q);
+				$t_idTag=$xml->createElement("T_ID",$_SESSION["id"]);
 				$QuizTag->appendChild($subjectTag);
-				}
-				setcookie("flag","1",time() + (86400 * 30), "/");
+				$QuizTag->appendChild($t_idTag);
+
+
+				//setcookie("flag","1",time() + (86400 * 30), "/");
 
 
 				$ques="";
@@ -95,8 +96,7 @@ session_start()?>
 
 				
 				$quesTag=$xml->createElement("ques");
-				$QuizTag->appendChild($quesTag);
-				$nameTag=$xml->createElement("Name",$ques);
+				$nameTag=$xml->createElement("name",$ques);
 				$option1Tag=$xml->createElement("option1",$opt1);
 				$option2Tag=$xml->createElement("option2",$opt2);
 				$option3Tag=$xml->createElement("option3",$opt3);
@@ -106,7 +106,9 @@ session_start()?>
 				$quesTag->appendChild($option2Tag);
 				$quesTag->appendChild($option3Tag);
 				$quesTag->appendChild($ansTag);
-				$xml->save('QuizLIst.xml');
+				$QuizTag->appendChild($quesTag);
+				$rootTag->appendChild($QuizTag);
+				$xml->save('QuizList.xml');
 
 
 		  ?>

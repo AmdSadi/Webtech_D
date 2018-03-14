@@ -8,11 +8,39 @@
 			$data = htmlspecialchars($data);
 			return $data;
 	}
+
 	$name=test_input($_POST["U_name"]);
 	$id=test_input($_POST["U_id"]);
 	$pass=test_input($_POST["U_pass"]);
 	$type=test_input($_POST["U_type"]);
-	if($type=="student"){
+
+	$dom=simplexml_load_file("studentlist.xml");
+	$flag=1;
+	foreach($dom->Student as $s)
+	{
+		if($s->ID==$id)
+		{
+			$flag=0;
+			setcookie("Duplicate","0",time()+(86400*30),"/");
+			header('Location:Registration.php');
+		}
+
+	}
+	$dom=simplexml_load_file("teacherlist.xml");
+	foreach($dom->Teacher as $s)
+	{
+		if($s->ID==$id)
+		{
+			$flag=0;
+			setcookie("Duplicate","0",time()+(86400*30),"/");
+			header('Location:Registration.php');
+		}
+
+	}
+
+
+	if($type=="student" && $flag==1){
+	
 	$xml= new DOMDocument("1.0","UTF-8");
 	$xml->load('studentlist.xml');
 	$rootTag=$xml->getElementsByTagName("Studentlist")->item(0);
@@ -25,8 +53,10 @@
 	$studentTag->appendChild($passTag);
 	$rootTag->appendChild($studentTag);
 	$xml->save('studentlist.xml');
+		header('Location:Index.php');
+
 	}
-	else
+	else if($type=="teacher" && $flag ==1)
 	{
 		$xml= new DOMDocument("1.0","UTF-8");
 	$xml->load('teacherlist.xml');
@@ -40,9 +70,10 @@
 	$studentTag->appendChild($passTag);
 	$rootTag->appendChild($studentTag);
 	$xml->save('teacherlist.xml');
+	header('Location:Index.php');
 
 	}
-	header('Location:Index.php');
+	
 
 
 

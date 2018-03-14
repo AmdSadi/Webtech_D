@@ -5,6 +5,9 @@
 	</head>
 	<body>
 		<e1>Register Here</e1>
+    <?php
+    setcookie("Duplicate","1",time()+(86400*30),"/");
+    ?>
 		<form name="Register" method="post" action="AddUser.php">
 
                 <table border="0" cellpadding="5" >
@@ -33,6 +36,11 @@
 
 
                 </table>
-               
+               <?php
+               if($_COOKIE["Duplicate"]=="0")
+               {
+                     echo"Duplicate ID";
+               }
+               ?>
 	</body>
 </html>
